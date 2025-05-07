@@ -6,6 +6,9 @@ graphrag使用案例
 
 ## 运行步骤
 
+### 环境要求
+
+`Python 3.10-3.12`
 
 ### 1. 安装 GraphRAG
 
