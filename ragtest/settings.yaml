@@ -42,17 +42,25 @@ models:
     tokens_per_minute: 0              # set to 0 to disable rate limiting
     requests_per_minute: 0            # set to 0 to disable rate limiting
 
+
+# 添加中文语言声明
+language: Chinese
+
 ### Input settings ###
 
 input:
   type: file # or blob
-  file_type: text # [csv, text, json]
+  file_type: csv # [csv, text, json]
   base_dir: "input"
+  source_column: tenant_id
+  text_column: auth_company_introduce
+  title_column: company
+  document_attribute_columns: [address, phone_num, auth_credit_code]
 
 chunks:
-  size: 1200
+  size: 500
   overlap: 100
-  group_by_columns: [id]
+  group_by_columns: [tenant_id]
 
 ### Output/storage settings ###
 ## If blob storage is specified in the following four sections,
